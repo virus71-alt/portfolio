@@ -3,4 +3,4 @@
 - Prefer Jetpack Compose
 - Use dark minimal UI
 - Keep animations smooth
-- Avoid unnecessary dependencies
+- Avoid unnecessary dependencies# portfolio
