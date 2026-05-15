@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repository | virus71</title>
+    <meta name="description" content="virus71's project repository — apps, tools, and experiments built by a creative technologist from Nepal.">
+    <meta property="og:title" content="Repository | virus71">
+    <meta property="og:description" content="Projects and experiments by virus71 — creative technologist from Nepal.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+
+    <div class="orb orb1" aria-hidden="true"></div>
+    <div class="orb orb2" aria-hidden="true"></div>
+    <div class="bg-word" aria-hidden="true" lang="ja">未来</div>
+
+    <nav>
+        <a href="index.html" class="logo">virus<span>71</span></a>
+        <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links">
+            <a href="index.html">01. HOME <span lang="ja">(ホーム)</span></a>
+            <a href="profiler.html">02. PROFILER <span lang="ja">(自己紹介)</span></a>
+            <a href="repository.html" class="active">03. REPOSITORY <span lang="ja">(プロジェクト)</span></a>
+            <a href="transmit.html">04. TRANSMIT <span lang="ja">(連絡)</span></a>
+        </div>
+    </nav>
+
+    <div class="repo-container">
+
+        <div class="repo-header">
+            <div class="section-title">
+                PROJECTS REPOSITORY <span lang="ja">// プロジェクト</span>
+            </div>
+            <a href="free.html" class="free-btn">FREE RESOURCES</a>
+        </div>
+
+        <div class="project-grid">
+
+            <div class="grid-card">
+                <div class="badge primary">App</div>
+                <div class="grid-card-tag">[ Travel Guide ]</div>
+                <h3>Kathmandu Hiker</h3>
+                <p>
+                    A comprehensive hiking companion application tailored for explorers navigating
+                    the Kathmandu Valley. Evolving from a mobile app concept into a fully-fledged
+                    Progressive Web App.
+                </p>
+                <div class="card-footer">
+                    <div class="grid-status">&gt; STATUS: ACTIVE</div>
+                    <button class="git-btn"
+                            onclick="checkGit(this, 'https://github.com/virus71-alt/KathmanduHiker.git')"
+                            aria-label="Open Kathmandu Hiker on GitHub">
+                        GIT
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid-card">
+                <div class="badge">EDUCATION</div>
+                <div class="grid-card-tag">[ Japanese Learning App ]</div>
+                <h3>My Nihongo</h3>
+                <p>
+                    A Japanese learning platform with organized notes, Kanji, grammar, tips, and
+                    study tricks designed to make Nihongo learning simpler and more effective for
+                    JLPT/JFT students.
+                </p>
+                <div class="card-footer">
+                    <div class="grid-status">&gt; STATUS: IN DEVELOPMENT</div>
+                    <button class="git-btn"
+                            onclick="checkGit(this, '')"
+                            aria-label="My Nihongo source code (not yet published)">
+                        GIT
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            <span class="brand">virus<span>71</span></span>
+            <span lang="ja"> バイラス71</span> // visitor@virus71:~$ connection established....
+        </div>
+        <div>© 2026 virus71. All rights reserved.</div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/repository.js"></script>
+</body>
+</html>

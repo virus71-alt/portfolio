@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transmit | virus71</title>
+    <meta name="description" content="Get in touch with virus71 — web development, Android modding, or just connecting.">
+    <meta property="og:title" content="Transmit | virus71">
+    <meta property="og:description" content="Get in touch with virus71 — always open to connecting.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+
+    <div class="orb orb1" aria-hidden="true"></div>
+    <div class="orb orb2" aria-hidden="true"></div>
+    <div class="bg-word" aria-hidden="true" lang="ja">接続</div>
+
+    <nav>
+        <a href="index.html" class="logo">virus<span>71</span></a>
+        <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links">
+            <a href="index.html">01. HOME <span lang="ja">(ホーム)</span></a>
+            <a href="profiler.html">02. PROFILER <span lang="ja">(自己紹介)</span></a>
+            <a href="repository.html">03. REPOSITORY <span lang="ja">(プロジェクト)</span></a>
+            <a href="transmit.html" class="active">04. TRANSMIT <span lang="ja">(連絡)</span></a>
+        </div>
+    </nav>
+
+    <div class="transmit-container">
+
+        <!-- LEFT: contact info -->
+        <div>
+            <div class="section-title">
+                LET'S CONNECT <span lang="ja">// つながろう</span>
+            </div>
+            <p class="info-text">
+                Have an idea? Let's build something awesome together.
+                Whether it's web development, Android modding,
+                or practicing Japanese for the N4,
+                I'm always open to connecting.
+            </p>
+            <ul class="contact-details">
+                <li>
+                    <span class="contact-label" aria-hidden="true">[E]</span>
+                    <span>virusrahul71@gmail.com</span>
+                </li>
+                <li>
+                    <span class="contact-label" aria-hidden="true">[L]</span>
+                    <span>Kathmandu, Nepal</span>
+                </li>
+                <li>
+                    <span class="contact-label" aria-hidden="true">[P]</span>
+                    <span>
+                        <button id="revealPhoneBtn" class="reveal-phone" aria-label="Reveal phone number">
+                            [ CLICK TO REVEAL ]
+                        </button>
+                        <span id="phoneDisplay"></span>
+                    </span>
+                </li>
+                <li>
+                    <span class="contact-label" aria-hidden="true">[S]</span>
+                    <span style="color: var(--success);">Always online (almost)</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- CENTER: contact form -->
+        <form id="contactForm" class="contact-form" novalidate>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="codename" class="form-label">Codename</label>
+                    <input id="codename" type="text" name="codename"
+                           placeholder="ENTER_CODENAME" required autocomplete="name">
+                </div>
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input id="email" type="email" name="email"
+                           placeholder="YOUR_TRANSMISSION_EMAIL" required autocomplete="email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="message" class="form-label">Message</label>
+                <textarea id="message" name="message"
+                          placeholder="TYPE_MESSAGE_HERE..." required></textarea>
+            </div>
+            <button type="submit" id="submitBtn" class="btn-submit">
+                Send_Transmission <span aria-hidden="true">&gt;</span>
+            </button>
+            <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+        </form>
+
+        <!-- RIGHT: socials + music player -->
+        <div>
+            <div class="section-title">
+                FIND ME ONLINE <span lang="ja">// ソーシャル</span>
+            </div>
+            <div class="social-grid">
+                <a href="https://github.com/virus71-alt"
+                   class="social-link github-link"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="GitHub profile">GitHub</a>
+                <a href="https://www.linkedin.com/in/rahul-singh-77061823b/"
+                   class="social-link"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="LinkedIn profile">LinkedIn</a>
+                <a href="https://www.youtube.com/@TechOrbit71"
+                   class="social-link"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="YouTube channel">YouTube</a>
+                <a href="https://www.instagram.com/rahul71.exe/"
+                   class="social-link"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Instagram profile">Instagram</a>
+            </div>
+
+            <div class="music-player" role="region" aria-label="Music player">
+                <div class="player-header">
+                    <span class="track-path" id="trackDisplay" aria-live="polite">&gt; Loading...</span>
+                    <div class="player-waveform" id="waveform" aria-hidden="true">
+                        <div class="p-wave-bar"></div>
+                        <div class="p-wave-bar"></div>
+                        <div class="p-wave-bar"></div>
+                        <div class="p-wave-bar"></div>
+                        <div class="p-wave-bar"></div>
+                    </div>
+                </div>
+                <div class="player-controls">
+                    <button class="play-btn" id="playBtn"
+                            onclick="togglePlay()" aria-label="Play">▶</button>
+                    <button class="play-btn next-btn" id="nextBtn"
+                            onclick="nextSong()" aria-label="Next track">⏭</button>
+                    <div class="progress-container" aria-hidden="true">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+                </div>
+                <audio id="bgAudio" preload="none"></audio>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div>
+            <span class="brand">virus<span>71</span></span>
+            <span lang="ja"> バイラス71</span> // visitor@virus71:~$ connection established....
+        </div>
+        <div>© 2026 virus71. All rights reserved.</div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/transmit.js"></script>
+</body>
+</html>
