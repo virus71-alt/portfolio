@@ -1,0 +1,6 @@
+- Never explain code
+- Return concise production-ready output
+- Prefer Jetpack Compose
+- Use dark minimal UI
+- Keep animations smooth
+- Avoid unnecessary dependencies
